@@ -41,16 +41,23 @@ hbs.registerHelper('scream', (text) => {
 
 //binding event according to HTTP request
 app.get('/', (req, res) => {
-    res.render('home.hbs', {
+    res.render('home', {
         title: 'Home Page',
         welcome: 'Welcome to Home Page.'
     });
 });
 
 app.get('/about', (req, res) => {
-    res.render('about.hbs', {
+    res.render('about', {
         title: 'About Page',
         welcome: 'Welcome to About Page.'
+    });
+});
+
+app.get('/projects', (req, res) => {
+    res.render('projects', {
+        title: 'Projects Page',
+        welcome: 'Welcome to Projects Page.'
     });
 });
 
